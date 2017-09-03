@@ -5,22 +5,12 @@ import structure.Heap;
 /**
  * Created by xingxiaoyu on 17/9/3.
  */
-public class Sort {
 
-    public static void main(String[] args) {
-        int[] A = {2, 3, 1, 4, 6, 8, 2, 3, 4, 66, 22, 1};
-        Heap heap = new Heap(A);
-        Sort sort = new Sort();
-        sort.heapSort(heap);
-        printstr(A);
-    }
-
-    public static void printstr(int[] A) {
-        for (int i : A) {
-            System.out.print(i + " ");
-        }
-        System.out.print("");
-    }
+/**
+ * 堆排序，首先建立最大堆，再将最后一个和第一个交换（n-1)次，堆大小-1，再对第一个进行Heapify
+ * 复杂度nlgn, 不稳定，原地排序
+ */
+public class HeapSort {
 
     public void heapSort(Heap heap) {
         heap.buildMaxHeap(heap);
