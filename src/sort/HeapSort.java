@@ -1,4 +1,4 @@
-package home_sort;
+package sort;
 
 import structure.Heap;
 

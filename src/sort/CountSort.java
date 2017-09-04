@@ -1,4 +1,4 @@
-package home_sort;
+package sort;
 
 /**
  * Created by xingxiaoyu on 17/9/3.

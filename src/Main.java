@@ -1,4 +1,4 @@
-import home_sort.*;
+import sort.*;
 import structure.Heap;
 
 /**
