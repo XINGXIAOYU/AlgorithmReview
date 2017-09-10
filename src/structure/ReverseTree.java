@@ -35,18 +35,24 @@ public class ReverseTree {
 
     }
 
+    int s;
+
     public void checkPre(TreeNode2 t) {
         if (t != null) {
-            System.out.print(t.data + ",");
+            if (s != 0) System.out.print(" ");
+            s++;
+            System.out.print(t.data);
             checkPre(t.left);
             checkPre(t.right);
         }
     }
-
+    int s2;
     public String checkIn(TreeNode2 t) {
         String s = "";
         if (t != null) {
             s += checkIn(t.left);
+            if (s2 != 0) s+=" ";
+            s2++;
             s += t.data;
             s += checkIn(t.right);
 
