@@ -6,11 +6,14 @@ package graph;
 public class BellmanFord {
     public int[] result;
 
-    public boolean bellmanford(Edge[] E, int n) {
+    public boolean bellmanford(Edge[] E, int n, int s) {
 
         //初始化 除了原点其他都为最大
         result = new int[n];
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
+            if (i == s) {
+                continue;
+            }
             result[i] = Integer.MAX_VALUE;
         }
 
@@ -49,7 +52,7 @@ public class BellmanFord {
         E[8] = new Edge(3, 5, 2);
         E[9] = new Edge(4, 5, 6);
         BellmanFord test = new BellmanFord();
-        if (test.bellmanford(E, 6)) {
+        if (test.bellmanford(E, 6, 0)) {
             for (int i = 0; i < test.result.length; i++)
                 System.out.print(test.result[i] + " ");
         } else
