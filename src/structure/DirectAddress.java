@@ -87,7 +87,7 @@ class DirectAddressWithCollision {
 
             }
             p.next = temp.next;
-            temp.pre = p.pre;
+            temp.next.pre = p;
             temp = null;
         }
         return 0;

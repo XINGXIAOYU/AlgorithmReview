@@ -32,7 +32,7 @@ public class BinaryTree {
         if (treeNode == TreeNode.NIL) {
             return 0;
         } else {
-            return size(treeNode.left) + 1 + size(treeNode.right) + 1;
+            return size(treeNode.left) + 1 + size(treeNode.right);
         }
     }
 
