@@ -140,7 +140,6 @@ class Edge2 {
 class Graph {
     Set<Vertex> vertexSet = new HashSet<Vertex>();
     Map<Vertex, Edge2[]> adjacents = new HashMap<Vertex, Edge2[]>();
-    Set<Edge2> edgeSet = new HashSet<Edge2>();
 
     public Vertex[] toposort(Graph g) {
         Set<Vertex> vertexes = g.vertexSet;
